@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #fff;
+  }
+  
+ 
+  header {
+    background: #1f1f1f;
+    padding: 40px 0;
+    font-family: "Playfair Display", serif;;
+}
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+nav li {
+    color: white;
+    font-size: 2.8rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    padding-bottom: 6px;
+    transition: 0.3s;
+}
+
+nav li::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    margin: auto;
+}
+
+nav li.active {
+    font-size: 3rem;
+    font-weight: 700;
+}
+ 
+  .about-section {
+    padding: 50px 20px;
+  }
+  
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 250px;
+    align-items: flex-start;
+    display: flex;
+  }
+  
+  .photo {
+    flex: 1 1 300px;
+    max-width: 400px;
+    display: flex;
+  }
+  
+  .photo img {
+    width: 600px;
+    height: 670px; 
+  }
+  
+  .about-text {
+    flex: 2 1 300px;
+  }
+  
+  .about-text h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #111;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .about-text p {
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #444;
+    font-size: 23px;
+  }
+  
+  
+  .site-footer {
+    background-color: #111;
+    color: #eee;
+    padding: 30px 20px;
+    margin-top: 50px;
+  }
+  
+  .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  footer {
+    background: #e0e0e0;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1rem;
+    color: #444;
+}
+  
+  .site-footer .social-contact .icon {
+    margin-right: 8px;
+  }
+  
+  .site-footer .social-contact {
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .copyright {
+    font-size: 40px;
+    opacity: 0.8;
+    height: 60px;
+    align-items: center;
+    background-color: #DDDDDD;
+    align-items: center;
+    justify-items: center;
+    font-family: "Playfair Display", serif;
+  }
+  
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .about-text {
+      text-align: left;
+    }
+  }
