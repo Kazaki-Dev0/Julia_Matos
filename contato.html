@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Júlia Matos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Galeria</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li class="active"><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="contato-hero">
+        
+        <div class="form-container">
+            <h1>Solicite um Orçamento</h1>
+            <p class="subtitulo">Conte-me mais sobre o seu projeto. Vamos criar algo incrível juntos!</p>
+
+            <form action="#">
+                <div class="input-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="telefone">Telefone (WhatsApp)</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="data">Data Pretendida</label>
+                    <input type="text" id="data" name="data" placeholder="xx/xx/xxxx">
+                </div>
+
+                <div class="input-group">
+                    <label for="servico">Tipo de Serviço</label>
+                    <div class="select-wrapper">
+                        <select id="servico" name="servico">
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="ensaio">Ensaio Pessoal/Profissional</option>
+                            <option value="rua">Fotografia de Rua (Comissionada)</option>
+                            <option value="evento">Eventos Corporativos</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="especificacao">Especificação</label>
+                    <textarea id="especificacao" name="especificacao" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar solicitação</button>
+            </form>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Júlia Matos. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

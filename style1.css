@@ -1,0 +1,202 @@
+/* =========================================
+   RESET E GLOBAIS
+   ========================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: #ffffff;
+    font-family: "Playfair Display", serif;
+    color: #222;
+}
+
+/* =========================================
+   HEADER (SEM LOGO, APENAS MENU)
+   ========================================= */
+header {
+    background: #1f1f1f;
+    padding: 40px 0;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+nav li {
+    color: white;
+    font-size: 2.8rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    padding-bottom: 6px;
+    transition: 0.3s;
+}
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* remove qualquer efeito de sublinhado */
+nav li::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    margin: auto;
+}
+
+/* destaque da página atual */
+nav li.active {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* ========== TÍTULOS ========== */
+h2 {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    font-size: 2.6rem; /* aumentado (era 2rem) */
+}
+
+
+/* =========================================
+   PÁGINA DE CONTATO (HERO + FORMULÁRIO)
+   ========================================= */
+
+.contato-hero {
+    background-image: 
+    url('./images/Gemini_Generated_Image_onshd9onshd9onsh 1.jpg');
+
+
+    background-size: cover;      /* Cobre toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    
+    min-height: 90vh; /* Altura da tela */
+    
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    /* Deixe o padding da esquerda maior para empurrar o form, ou use center */
+    padding: 50px 10%; 
+}
+
+/* O CARTÃO MARROM DO FORMULÁRIO */
+.form-container {
+    background-color: rgba(60, 52, 45, 0.95); /* Marrom Escuro Translúcido */
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 480px; /* Largura máxima do form */
+    color: #fff;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+.form-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.subtitulo {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+/* INPUTS E LABELS */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Estilo dos campos (Bege/Taupe escuro) */
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #b0a59e; /* Cor dos inputs da referência */
+    color: #222;
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    outline: none;
+}
+
+::placeholder { color: #4a4a4a; opacity: 0.7; }
+
+/* BOTÃO VERDE */
+.btn-enviar {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    background-color: #3e6b46; /* Verde Musgo */
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 30px; /* Formato pílula */
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #2e5234; /* Verde mais escuro no hover */
+    transform: scale(1.02); /* Leve aumento */
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background: #e0e0e0;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1rem;
+    color: #444;
+}
+
+/* =========================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Ajuste Menu Mobile */
+    nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav li { font-size: 1.2rem; }
+
+    /* Ajuste Form Mobile */
+    .contato-hero {
+        padding: 40px 20px;
+        justify-content: center; /* Centraliza na tela pequena */
+    }
+    
+    .form-container {
+        padding: 30px 20px;
+    }
+
+    .form-container h1 { font-size: 1.8rem; }
+}

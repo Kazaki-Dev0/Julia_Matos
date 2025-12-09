@@ -16,7 +16,12 @@ header {
     background: #1f1f1f;
     padding: 40px 0;
 }
-
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
 nav ul {
     list-style: none;
     display: flex;
@@ -31,6 +36,10 @@ nav li {
     cursor: pointer;
     padding-bottom: 6px;
     transition: 0.3s;
+}
+nav a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* remove qualquer efeito de sublinhado */
@@ -79,12 +88,34 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-.hero { grid-column: span 6; height: 340px; }
-.vertical { grid-column: span 2; grid-row: span 2; height: 420px; }
-.quadrada { grid-column: span 2; aspect-ratio: 1 / 1; }
-.horizontal { grid-column: span 6; height: 200px; }
+/* 1. Hero: Ocupa tudo no topo */
+.hero { 
+    grid-column: span 6; 
+    height: 340px; 
+}
+
+/* 2. Vertical: Ocupa a esquerda (2 colunas) e 2 linhas de altura */
+.vertical { 
+    grid-column: span 2; 
+    grid-row: span 2; 
+    height: 100%; /* Importante: estica para igualar a soma das vizinhas */
+}
+
+/* 3. Quadrada: Ocupam o topo à direita da vertical */
+.quadrada { 
+    grid-column: span 2; 
+    height: 200px; /* Altura fixa para controle */
+}
+
+/* 4. Horizontal: Ocupa o espaço restante abaixo das quadradas (4 colunas) */
+/* ANTES estava span 6, por isso quebrava. AGORA é span 4. */
+.horizontal { 
+    grid-column: span 4; 
+    height: 200px; /* Mesma altura da quadrada para manter simetria */
+}
 
 
 /* ============================================================
@@ -116,17 +147,18 @@ h2 {
    ============================================================ */
 
 .grid-eventos {
-    column-count: 3;
-    column-gap: 14px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
 }
 
 .grid-eventos img {
     width: 100%;
-    margin-bottom: 14px;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 5px;
-    break-inside: avoid;
 }
-
 
 /* ============================================================
    ********************   RESPONSIVIDADE   *********************
@@ -136,15 +168,17 @@ h2 {
     .grid-arquitetura {
         grid-template-columns: repeat(4, 1fr);
     }
+
     .hero { grid-column: span 4; }
     .horizontal { grid-column: span 4; }
+    .vertical { grid-column: span 2; }
 
     .grid-retratos {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .grid-eventos {
-        column-count: 2;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -154,26 +188,20 @@ h2 {
     .grid-arquitetura {
         grid-template-columns: repeat(2, 1fr);
     }
-    .hero { height: 200px; grid-column: span 2; }
-    .vertical { height: 260px; grid-column: span 1; }
-    .horizontal { height: 150px; grid-column: span 2; }
+
+    .hero { grid-column: span 2; }
+    .horizontal { grid-column: span 2; }
 
     .grid-retratos {
         grid-template-columns: 1fr;
     }
 
     .grid-eventos {
-        column-count: 1;
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        margin: 0 auto;
     }
 }
-
-/* ========== FOOTER ========== */
-
-footer {
-    text-align: center;
-    padding: 30px 0;
-    margin-top: 40px;
-    background: #f0f0f0;
-    font-size: 1rem;
-    color: #444;
-}
+footer { text-align: center; padding: 30px 0; margin-top: 40px; background: #f0f0f0; font-size: 1rem; color: #444; }
