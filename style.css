@@ -10,8 +10,6 @@ body {
     color: #222;
 }
 
-/* ========== HEADER / NAV ========== */
-
 header {
     background: #1f1f1f;
     padding: 40px 0;
@@ -42,7 +40,7 @@ nav a {
     color: inherit;
 }
 
-/* remove qualquer efeito de sublinhado */
+
 nav li::after {
     content: "";
     display: block;
@@ -52,13 +50,12 @@ nav li::after {
     margin: auto;
 }
 
-/* destaque da página atual */
+
 nav li.active {
     font-size: 3rem;
     font-weight: 700;
 }
 
-/* ========== TÍTULOS ========== */
 h2 {
     text-align: center;
     margin-top: 45px;
@@ -66,17 +63,12 @@ h2 {
     font-size: 2.6rem; /* aumentado (era 2rem) */
 }
 
-/* ========== CONTAINERS ========== */
 .categoria {
     width: 90%;
     max-width: 1050px;
     margin: 0 auto;
 }
 
-
-/* ============================================================
-   *********************   ARQUITETURA   **********************
-   ============================================================ */
 
 .grid-arquitetura {
     display: grid;
@@ -118,9 +110,6 @@ h2 {
 }
 
 
-/* ============================================================
-   **********************   RETRATOS   ************************
-   ============================================================ */
 
 .grid-retratos {
     display: grid;
@@ -141,11 +130,6 @@ h2 {
     object-fit: cover;
 }
 
-
-/* ============================================================
-   **********************   EVENTOS   *************************
-   ============================================================ */
-
 .grid-eventos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -160,9 +144,6 @@ h2 {
     border-radius: 5px;
 }
 
-/* ============================================================
-   ********************   RESPONSIVIDADE   *********************
-   ============================================================ */
 
 @media (max-width: 900px) {
     .grid-arquitetura {

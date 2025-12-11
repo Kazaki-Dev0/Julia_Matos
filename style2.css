@@ -10,10 +10,6 @@ body {
     color: #222;
 }
 
-/* ============================
-   NAV (PADRONIZADO)
-============================ */
-
 header {
     background: #1f1f1f;
     padding: 40px 0;
@@ -50,11 +46,6 @@ nav li.active {
     font-size: 3rem;
     font-weight: 700;
 }
-
-/* ============================
-   SOBRE
-============================ */
-
 .about-section {
     padding: 60px 20px;
 }
@@ -93,10 +84,6 @@ nav li.active {
     color: #444;
 }
 
-/* ============================
-   FOOTER
-============================ */
-
 footer {
     background: #e0e0e0;
     text-align: center;
@@ -104,10 +91,6 @@ footer {
     font-size: 1rem;
     color: #444;
 }
-
-/* ============================
-   MEDIA QUERIES (RESPONSIVO)
-============================ */
 
 @media (max-width: 900px) {
     nav ul {
@@ -162,9 +145,6 @@ footer {
         font-size: 1.8rem;
     }
 }
-/* ============================
-   MÍDIAS SOCIAIS (NOVO)
-============================ */
 
 .social-section {
     background-color: #1f1f1f; /* Mesma cor do Header */
@@ -180,7 +160,7 @@ footer {
     gap: 30px; /* Espaço entre a linha do Insta e do Whats */
 }
 
-/* A linha inteira (Esquerda - Linha - Direita) */
+
 .social-row {
     display: flex;
     align-items: center;
@@ -188,7 +168,6 @@ footer {
     font-size: 1.3rem; /* Tamanho da fonte */
 }
 
-/* Lado Esquerdo (Ícone + Texto) */
 .social-left {
     display: flex;
     align-items: center;
@@ -196,56 +175,49 @@ footer {
     min-width: 160px; /* Garante alinhamento */
 }
 
-/* Estilo da Imagem do Ícone */
+
 .social-icon {
     width: 30px;  /* Tamanho do ícone */
     height: 30px;
     object-fit: contain;
-    /* Se seus ícones forem pretos e transparentes, 
-       use este filtro para deixá-los brancos: */
-    /* filter: invert(1); */ 
+   
 }
 
-/* A Linha Central Conectora */
 .social-line {
-    flex-grow: 1; /* Ocupa todo o espaço disponível */
+    flex-grow: 1; 
     height: 2px;
     background-color: white;
-    margin: 0 30px; /* Espaço nas laterais da linha */
+    margin: 0 30px;
     opacity: 0.8;
 }
 
-/* Lado Direito (O @ e o número) */
+
 .social-right {
     min-width: 150px;
     text-align: right;
 }
 
-/* ============================
-   RESPONSIVIDADE DAS MÍDIAS
-============================ */
-
 @media (max-width: 700px) {
     .social-row {
-        flex-direction: column; /* Empilha um embaixo do outro */
+        flex-direction: column;
         gap: 10px;
         text-align: center;
-        padding-bottom: 30px; /* Separação extra entre blocos no mobile */
+        padding-bottom: 30px;
     }
 
-    /* Esconde a linha no celular pois fica feio */
+    
     .social-line {
         display: none;
     }
 
     .social-left {
-        justify-content: center; /* Centraliza ícone e texto */
+        justify-content: center; 
         width: 100%;
     }
 
     .social-right {
-        text-align: center; /* Centraliza o @ e o número */
-        font-weight: 700;   /* Dá um destaque no dado de contato */
+        text-align: center; 
+        font-weight: 700; 
         color: #ddd;
     }
 }

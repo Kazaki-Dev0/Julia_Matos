@@ -6,10 +6,6 @@ body {
     color: #222;
 }
 
-/* ================================
-   HEADER / MENU
-================================ */
-
 header {
     background: #1f1f1f;
     padding: 40px 0;
@@ -46,7 +42,6 @@ nav li.active {
     font-weight: 700;
 }
 
-/* Remove underline visual */
 nav li::after {
     content: "";
     display: block;
@@ -55,10 +50,6 @@ nav li::after {
     background: transparent;
     margin: auto;
 }
-
-/* ================================
-   RESPONSIVIDADE DO MENU
-================================ */
 
 @media (max-width: 900px) {
 
@@ -94,10 +85,6 @@ nav li::after {
         font-size: 1.75rem;
     }
 }
-
-/* ================================
-   HERO + FORMULÁRIO
-================================ */
 
 .contato-hero {
     background-image: url('./images/Gemini_Generated_Image_onshd9onshd9onsh 1.jpg');
@@ -154,7 +141,6 @@ textarea {
     font-size: 1rem;
 }
 
-/* BOTÃO */
 .btn-enviar {
     display: block;
     width: 100%;
@@ -175,10 +161,6 @@ textarea {
     transform: scale(1.02);
 }
 
-/* ================================
-   FORM MOBILE
-================================ */
-
 @media (max-width: 768px) {
 
     .contato-hero {
@@ -195,9 +177,6 @@ textarea {
     }
 }
 
-/* ================================
-             FOOTER
-================================ */
 
 footer {
     background: #e0e0e0;
